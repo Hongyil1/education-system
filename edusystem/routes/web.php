@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/test', 'PageController@show');
+Route::post('/test', 'PageController@pass');
