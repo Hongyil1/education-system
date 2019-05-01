@@ -21,7 +21,6 @@
     <input class="btn btn-primary" type="submit" value="Submit">
   </form>
 
-
   <br>
   @if (count($input) > 0)
       <p>Name: {{ $input['name'] }}</p>
