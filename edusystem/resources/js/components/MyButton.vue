@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <button type="submit" name="button" class="my-button">My Button</button>
+        <button :type="type" class="my-button" v-text="test.name"></button>
     </div>
 </template>
 
@@ -8,12 +8,32 @@
     export default {
         mounted() {
             console.log('Component mounted.')
-        }
+            // axios used to featch data
+            // Featch data from backend and forward it to front end
+            axios.post('api/vue', {})
+                .then(response => {
+                  this.test = response.data;
+                });
+        },
+
+        data: function(){
+          return {
+            test: null,
+          }
+        },
+
+        props: [
+          'text',
+          'type'
+        ]
     }
 </script>
 
 <style>
     .my-button {
       background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      font-weight: bold;
     }
 </style>

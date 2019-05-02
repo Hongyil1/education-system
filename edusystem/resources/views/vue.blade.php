@@ -25,7 +25,7 @@
 <body>
     <div id="app">
       <h1 class="new-class">This is vue!</h1>
-      <my-button></my-button>
+      <my-button text="My New Text Button" type="submit"></my-button>
     </div>
 </body>
 </html>

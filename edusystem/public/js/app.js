@@ -1771,8 +1771,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
-    console.log('Component mounted.');
-  }
+    var _this = this;
+
+    console.log('Component mounted.'); // axios used to featch data
+    // Featch data from backend and forward it to front end
+
+    axios.post('api/vue', {}).then(function (response) {
+      _this.test = response.data;
+    });
+  },
+  data: function data() {
+    return {
+      test: null
+    };
+  },
+  props: ['text', 'type']
 });
 
 /***/ }),
@@ -6234,7 +6247,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.my-button {\n  background-color: #333;\n}\n", ""]);
+exports.push([module.i, "\n.my-button {\n  background-color: #333;\n  color: #fff;\n  padding: 10px 20px;\n  font-weight: bold;\n}\n", ""]);
 
 // exports
 
@@ -37711,22 +37724,15 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", {}, [
+    _c("button", {
+      staticClass: "my-button",
+      attrs: { type: _vm.type },
+      domProps: { textContent: _vm._s(_vm.test.name) }
+    })
+  ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", {}, [
-      _c(
-        "button",
-        { staticClass: "my-button", attrs: { type: "submit", name: "button" } },
-        [_vm._v("My Button")]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
