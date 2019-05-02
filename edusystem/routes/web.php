@@ -21,3 +21,6 @@ Route::post('/test', 'PageController@pass');
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/vue', function() {
+  return view('vue');
+});
