@@ -22,6 +22,7 @@
           }
         },
 
+        // The property of the <my-button> label
         props: [
           'text',
           'type'

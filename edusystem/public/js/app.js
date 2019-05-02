@@ -1785,6 +1785,7 @@ __webpack_require__.r(__webpack_exports__);
       test: null
     };
   },
+  // The property of the <my-button> label
   props: ['text', 'type']
 });
 
