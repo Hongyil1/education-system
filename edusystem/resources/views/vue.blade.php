@@ -46,6 +46,7 @@
     <div id="test2">
       <h1>This is a new Test for two ids!</h1>
       <my-input></my-input>
+      <learn><learn>
     </div>
 </body>
 </html>

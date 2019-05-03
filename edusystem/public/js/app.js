@@ -1829,9 +1829,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('This is from MyInput.');
+  },
+  prop: ['value'],
+  data: function data() {
+    return {
+      content: this.value
+    };
+  },
+  methods: {
+    handleInput: function handleInput(e) {
+      this.$emit('input', this.content);
+    }
   }
 });
 
@@ -6294,7 +6306,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.learn {\n   background-color: yellow;\n   color: #fff;\n   padding: 10px 20px;\n   font-weight: bold;\n}\n", ""]);
+exports.push([module.i, "\n.learn2 {\n   background-color: yellow;\n   color: #fff;\n   padding: 10px 20px;\n   font-weight: bold;\n}\n", ""]);
 
 // exports
 
@@ -37828,7 +37840,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
-      _c("h1", { staticClass: "learn" }, [_vm._v("This is from Learn")])
+      _c("h1", { staticClass: "learn2" }, [_vm._v("This is from Learn")])
     ])
   }
 ]

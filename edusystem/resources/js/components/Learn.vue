@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h1 class="learn">This is from Learn</h1>
+      <h1 class="learn2" >This is from Learn</h1>
     </div>
 </template>
 
@@ -14,7 +14,7 @@
 </script>
 
 <style>
-   .learn {
+   .learn2 {
       background-color: yellow;
       color: #fff;
       padding: 10px 20px;
