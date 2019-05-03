@@ -25,7 +25,27 @@
 <body>
     <div id="app">
       <h1 class="new-class">This is vue!</h1>
-      <my-button text="My New Text Button" type="submit"></my-button>
+    </div>
+
+    {{-- <div id="root">
+        <my-button text="My New Text Button" type="submit"></my-button>
+
+
+  <my-button text="My New Text Button" type="submit"></my-button>
+    </div>
+        <div id="learn">
+<learn></learn>
+        </div> --}}
+    <div id="test">
+      <my-button text="This is my button"></my-button>
+      <br>
+      <learn></learn>
+      <br>
+    </div>
+
+    <div id="test2">
+      <h1>This is a new Test for two ids!</h1>
+      <my-input></my-input>
     </div>
 </body>
 </html>

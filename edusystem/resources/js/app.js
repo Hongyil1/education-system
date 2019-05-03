@@ -21,13 +21,22 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 // Register the component
 Vue.component('my-button', require('./components/MyButton.vue').default);
+Vue.component('learn', require('./components/Learn.vue').default);
+Vue.component('my-input', require('./components/MyInput.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
+//
 const app = new Vue({
-    el: '#app'
+  el: '#test',
 });
+
+const app2 = new Vue({
+  el: '#test2',
+});
+
+
+// const ap1 = new Vue({el: '#learn'});
